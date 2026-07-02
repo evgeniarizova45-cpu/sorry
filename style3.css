@@ -1,0 +1,101 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+
+    background:#050505;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:100vh;
+
+    overflow:hidden;
+
+}
+
+/* Куб */
+
+.box{
+
+    width:340px;
+
+    padding:45px 30px;
+
+    border-radius:25px;
+
+    background:#111;
+
+    text-align:center;
+
+    border:2px solid #ff4f81;
+
+    box-shadow:
+        0 0 15px #ff4f81,
+        0 0 35px #ff4f81;
+
+    animation:blink 2s infinite;
+
+}
+
+/* Заголовок */
+
+h1{
+
+    color:#ff7fa9;
+
+    margin-bottom:25px;
+
+    font-size:34px;
+
+}
+
+/* Текст */
+
+p{
+
+    color:white;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+}
+
+/* Блимання */
+
+@keyframes blink{
+
+    0%{
+
+        box-shadow:
+        0 0 10px #ff4f81,
+        0 0 25px #ff4f81;
+
+    }
+
+    50%{
+
+        box-shadow:
+        0 0 25px #ff82ac,
+        0 0 60px #ff82ac,
+        0 0 100px #ff82ac;
+
+    }
+
+    100%{
+
+        box-shadow:
+        0 0 10px #ff4f81,
+        0 0 25px #ff4f81;
+
+    }
+
+}

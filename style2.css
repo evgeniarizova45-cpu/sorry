@@ -1,0 +1,146 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:url("img/view-beautiful-persian-domestic-cat_23-2151773821.avif");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+/* Затемнення фото */
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(255,190,210,.25);
+
+    backdrop-filter:blur(2px);
+
+}
+
+/* Серце */
+
+.heart{
+
+    position:relative;
+
+    width:320px;
+
+    height:290px;
+
+    background:#ffd9e5;
+
+    transform:rotate(-45deg);
+
+    box-shadow:
+    0 0 40px rgba(255,120,170,.7);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    animation:heartBeat 2s infinite;
+
+}
+
+.heart::before,
+.heart::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:290px;
+
+    background:#ffd9e5;
+
+    border-radius:50%;
+
+}
+
+.heart::before{
+
+    top:-150px;
+
+    left:0;
+
+}
+
+.heart::after{
+
+    left:150px;
+
+    top:0;
+
+}
+
+/* Текст */
+
+.heart p{
+
+    position:absolute;
+
+    width:230px;
+
+    text-align:center;
+
+    color:#9c4f67;
+
+    font-size:24px;
+
+    line-height:1.6;
+
+    transform:rotate(45deg);
+
+    z-index:5;
+
+}
+
+/* Пульсація */
+
+@keyframes heartBeat{
+
+    0%{
+
+        transform:rotate(-45deg) scale(1);
+
+    }
+
+    50%{
+
+        transform:rotate(-45deg) scale(1.05);
+
+    }
+
+    100%{
+
+        transform:rotate(-45deg) scale(1);
+
+    }
+
+}
